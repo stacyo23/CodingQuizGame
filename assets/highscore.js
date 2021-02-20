@@ -27,7 +27,7 @@ reset.addEventListener("click", function () {
 
 //takes the use to the index page to restart the quiz
 toIndex.addEventListener("click", function () {
-    window.location.replace("../index.html");
+    window.location.replace("./index.html");
 })
 
 

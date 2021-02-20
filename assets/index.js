@@ -36,7 +36,7 @@ var questionIndex=0;
 //creates variables for the elements by ID names
 var timer =document.querySelector("#timer");
 var pressStart =document.querySelector("#pressStart");
-var questionsDiv =document.querySelector("#questions-div");
+var questionsDiv =document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper"); 
 
 //time @ initiation
@@ -106,7 +106,7 @@ function checkAnswer(event) {
             newDiv.textContent ="Correct"; 
         } else {
             timeLeft=timeLeft-penalty; 
-            newDiv.textContent = "Wrong! The correct answer was: " =question[question.Index].answer; 
+            newDiv.textContent = "Wrong! The correct answer was: " + questions[questionIndex].answer; 
         }
 
     }
@@ -128,7 +128,7 @@ questionsDiv.appendChild(newDiv);
 function finish() {
     //clears values
     questionsDiv.innerHTML = "";
-    currentTime.innerHTML = "";
+    timeLeft.innerHTML = "";
 
 //dynamically creates h1 tag with an id of create H1
 var createH1 = document.createElement("h1");
@@ -218,7 +218,7 @@ if (initials===null) {
 //sets stringified values into localstorage
 localStorage.setItem("allScores", JSONScores); 
 //moves window to highscores page
-window.location.replace("./highscore.js"); 
+window.location.replace("./highscore.html"); 
 
 }
 
